@@ -6,7 +6,7 @@ import { articleType } from "../content";
 const Avatar = ({ article }: { article: articleType }) => {
   return (
     <Link
-      href={`/blog/author/${article.author.slug}`}
+      href={`/writing/author/${article.author.slug}`}
       title={`Posts by ${article.author.name}`}
       className="inline-flex items-center gap-2 group"
       rel="author"

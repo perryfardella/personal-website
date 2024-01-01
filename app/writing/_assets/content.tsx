@@ -1,10 +1,10 @@
 import type { JSX } from "react";
 import Image, { StaticImageData } from "next/image";
-import marcImg from "@/app/blog/_assets/images/authors/marc.png";
-import introducingSupabaseImg from "@/public/blog/introducing-supabase/header.png";
+import marcImg from "@/app/writing/_assets/images/authors/marc.png";
+import introducingSupabaseImg from "@/public/writing/introducing-supabase/header.png";
 
 // ==================================================================================================================================================================
-// BLOG CATEGORIES 🏷️
+// writing CATEGORIES 🏷️
 // ==================================================================================================================================================================
 
 export type categoryType = {
@@ -15,13 +15,13 @@ export type categoryType = {
   descriptionShort?: string;
 };
 
-// These slugs are used to generate pages in the /blog/category/[categoryI].js. It's a way to group articles by category.
+// These slugs are used to generate pages in the /writing/category/[categoryI].js. It's a way to group articles by category.
 const categorySlugs: { [key: string]: string } = {
   feature: "feature",
   tutorial: "tutorial",
 };
 
-// All the blog categories data display in the /blog/category/[categoryI].js pages.
+// All the writing categories data display in the /writing/category/[categoryI].js pages.
 export const categories: categoryType[] = [
   {
     // The slug to use in the URL, from the categorySlugs object above.
@@ -48,7 +48,7 @@ export const categories: categoryType[] = [
 ];
 
 // ==================================================================================================================================================================
-// BLOG AUTHORS 📝
+// writing AUTHORS 📝
 // ==================================================================================================================================================================
 
 export type authorType = {
@@ -120,14 +120,14 @@ const socialIcons: {
   },
 };
 
-// These slugs are used to generate pages in the /blog/author/[authorId].js. It's a way to show all articles from an author.
+// These slugs are used to generate pages in the /writing/author/[authorId].js. It's a way to show all articles from an author.
 const authorSlugs: {
   [key: string]: string;
 } = {
   marc: "marc",
 };
 
-// All the blog authors data display in the /blog/author/[authorId].js pages.
+// All the writing authors data display in the /writing/author/[authorId].js pages.
 export const authors: authorType[] = [
   {
     // The slug to use in the URL, from the authorSlugs object above.
@@ -163,7 +163,7 @@ export const authors: authorType[] = [
 ];
 
 // ==================================================================================================================================================================
-// BLOG ARTICLES 📚
+// writing ARTICLES 📚
 // ==================================================================================================================================================================
 
 export type articleType = {
@@ -196,7 +196,7 @@ const styles: {
     "text-sm font-mono bg-base-300 px-1 py-0.5 rounded-box select-all",
 };
 
-// All the blog articles data display in the /blog/[articleId].js pages.
+// All the writing articles data display in the /writing/[articleId].js pages.
 export const articles: articleType[] = [
   {
     // The unique slug to use in the URL. It's also used to generate the canonical URL.
@@ -218,7 +218,7 @@ export const articles: articleType[] = [
       // The image to display in <CardArticle /> components.
       src: introducingSupabaseImg,
       // The relative URL of the same image to use in the Open Graph meta tags & the Schema Markup JSON-LD. It should be the same image as the src above.
-      urlRelative: "/blog/introducing-supabase/header.jpg",
+      urlRelative: "/writing/introducing-supabase/header.jpg",
       alt: "Supabase and ShipFast logo combined",
     },
     // The actual content of the article that will be shown under the <h1> title in the article page.

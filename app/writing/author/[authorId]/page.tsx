@@ -14,7 +14,7 @@ export async function generateMetadata({
   return getSEOTags({
     title: `${author.name}, Author at ${config.appName}'s Blog`,
     description: `${author.name}, Author at ${config.appName}'s Blog`,
-    canonicalUrlRelative: `/blog/author/${author.slug}`,
+    canonicalUrlRelative: `/writing/author/${author.slug}`,
   });
 }
 

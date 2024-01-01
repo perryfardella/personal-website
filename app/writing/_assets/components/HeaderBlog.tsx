@@ -16,7 +16,7 @@ const links: {
   label: string;
 }[] = [
   {
-    href: "/blog/",
+    href: "/writing/",
     label: "All Posts",
   },
 ];
@@ -32,7 +32,7 @@ const ButtonPopoverCategories = () => {
         <>
           <Popover.Button
             className="link no-underline flex flex-nowrap items-center gap-1 text-base-content/80 hover:text-base-content active:text-base-content focus:text-base-content duration-100"
-            title="Open Blog categories"
+            title="Open writing categories"
           >
             Categories
             <svg
@@ -66,7 +66,7 @@ const ButtonPopoverCategories = () => {
                       <div key={category.slug} onClick={() => close()}>
                         <Link
                           className="block text-left p-3 -m-1 cursor-pointer hover:bg-base-200 rounded-box duration-200"
-                          href={`/blog/category/${category.slug}`}
+                          href={`/writing/category/${category.slug}`}
                         >
                           <div className="">
                             <p className="font-medium mb-0.5">
@@ -127,7 +127,7 @@ const ButtonAccordionCategories = () => {
           {categories.map((category) => (
             <li key={category.slug}>
               <Link
-                href={`/blog/category/${category.slug}`}
+                href={`/writing/category/${category.slug}`}
                 className="text-base-content/80 hover:text-base-content duration-100 link link-hover"
               >
                 {category?.titleShort || category.title}
@@ -140,10 +140,10 @@ const ButtonAccordionCategories = () => {
   );
 };
 
-// This is the header that appears on all pages in the /blog folder.
+// This is the header that appears on all pages in the /writing folder.
 // By default it shows the logo, the links, and the CTA.
 // In the links, there's a popover with the categories.
-const HeaderBlog = () => {
+const HeaderWriting = () => {
   const searchParams = useSearchParams();
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
@@ -291,4 +291,4 @@ const HeaderBlog = () => {
   );
 };
 
-export default HeaderBlog;
+export default HeaderWriting;

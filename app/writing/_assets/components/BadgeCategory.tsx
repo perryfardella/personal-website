@@ -11,7 +11,7 @@ const Category = ({
 }) => {
   return (
     <Link
-      href={`/blog/category/${category.slug}`}
+      href={`/writing/category/${category.slug}`}
       className={`badge badge-sm md:badge-md hover:badge-primary ${
         extraStyle ? extraStyle : ""
       }`}
