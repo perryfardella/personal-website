@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +17,26 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+      <nav className="flex justify-between items-center p-4">
+          <div className="flex-1"></div>
+          <ul className="flex space-x-4">
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <a href="/blog">Blog</a>
+            </li>
+            <li>
+              <a href="https://x.com/perryfardella" target="_blank" rel="noopener noreferrer">Twitter</a>
+            </li>
+          </ul>
+          <div className="flex-1 flex justify-end">
+            <ThemeToggle />
+          </div>
+        </nav>
+        {children}
+      </body>
     </html>
   );
 }
