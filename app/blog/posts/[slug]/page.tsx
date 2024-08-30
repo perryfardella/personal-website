@@ -1,6 +1,7 @@
-import { notFound } from 'next/navigation';
-import { marked } from 'marked';
-import { getBlogPosts } from '../../helpers';
+/* eslint-disable react/no-unescaped-entities */
+import { notFound } from "next/navigation";
+import { marked } from "marked";
+import { getBlogPosts } from "../../helpers";
 
 export async function generateStaticParams() {
   const posts = getBlogPosts();
@@ -11,7 +12,7 @@ export async function generateStaticParams() {
 
 export default function BlogPost({ params }: { params: { slug: string } }) {
   const posts = getBlogPosts();
-  const post = posts.find(p => p.slug === params.slug);
+  const post = posts.find((p) => p.slug === params.slug);
 
   if (!post) {
     notFound();
@@ -22,7 +23,9 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
   return (
     <article>
       <h1 className="text-3xl font-bold mb-2">{post.title}</h1>
-      <p className="text-sm text-gray-500 mb-4">{new Date(post.date).toLocaleDateString()}</p>
+      <p className="text-sm text-gray-500 mb-4">
+        {new Date(post.date).toLocaleDateString()}
+      </p>
       <div dangerouslySetInnerHTML={{ __html: content }} className="prose" />
     </article>
   );
