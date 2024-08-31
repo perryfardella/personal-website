@@ -13,7 +13,7 @@ export default function Home() {
         className="rounded-full"
       />
       <p className="text-lg mb-6">I'm a software engineer and CPA</p>
-      <p>I recently took indefinite hiatus my job to work on startups</p>
+      <p>I recently took indefinite hiatus from my job to work on startups</p>
       <p>
         Here you'll find a list of the startups I've built, as well as some long
         and short form thoughts
