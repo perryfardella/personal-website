@@ -10,7 +10,7 @@ export default function Home() {
         alt="Perry's profile picture"
         width={200}
         height={200}
-        className="rounded-full"
+        className="rounded-full pb-6"
       />
       <p className="text-lg mb-6">I'm a software engineer and CPA.</p>
       <p>
