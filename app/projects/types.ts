@@ -1,5 +1,5 @@
 type ProjectInfo = {
-  name: string;
+  title: string;
   description: string;
   websiteLink: string;
   imageLink: string;

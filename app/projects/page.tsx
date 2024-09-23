@@ -1,10 +1,18 @@
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import Image from "next/image";
-import Link from "next/link";
 
 export default function ProjectsIndex() {
   const projects: ProjectInfo[] = [
     {
-      name: "CGT Calculator",
+      title: "CGT Calculator",
       description: "A Capital Gains Tax calculator for Australia",
       websiteLink: "https://www.cgt-calculator.com",
       imageLink: "/cgtCalc.png",
@@ -15,22 +23,21 @@ export default function ProjectsIndex() {
   return (
     <main className="flex min-h-screen flex-col items-center p-8">
       {projects.map((project) => (
-        <div
-          className="card card-compact bg-base-100 w-96 shadow-xl"
-          key={project.websiteLink}
-        >
-          <figure>
+        <Card>
+          <CardHeader>
+            <CardTitle>{project.title}</CardTitle>
+            <CardDescription>{project.description}</CardDescription>
+          </CardHeader>
+          <CardContent>
             <Image
               src={project.imageLink}
               alt={project.imageAlt}
               width={300}
               height={200}
             />
-          </figure>
-          <div className="card-body">
-            <h2 className="card-title">{project.name}</h2>
-            <p>{project.description}</p>
-            <div className="card-actions justify-end">
+          </CardContent>
+          <CardFooter>
+            <Button asChild>
               <a
                 href={project.websiteLink}
                 target="_blank"
@@ -39,9 +46,9 @@ export default function ProjectsIndex() {
               >
                 Visit website
               </a>
-            </div>
-          </div>
-        </div>
+            </Button>
+          </CardFooter>
+        </Card>
       ))}
     </main>
   );

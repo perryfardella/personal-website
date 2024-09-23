@@ -14,8 +14,8 @@ export default function Home() {
       />
       <p className="text-lg mb-6">I'm a software engineer and CPA.</p>
       <p>
-        Here you'll find a list of the startups I've built, as well as some long
-        and short form thoughts.
+        I'm currently on hiatus from my day-job to travel the world, build side
+        projects and get my ass kicked at BJJ.
       </p>
     </main>
   );
