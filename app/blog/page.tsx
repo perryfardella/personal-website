@@ -5,7 +5,7 @@ export default function BlogIndex() {
   const posts = getBlogPosts();
 
   return (
-    <main className="flex min-h-screen flex-col items-center p-24">
+    <main className="flex min-h-screen flex-col items-center p-4">
       <h1 className="text-3xl font-bold mb-6">Blog Posts</h1>
       {!!posts[0] ? (
         <ul className="space-y-4">
