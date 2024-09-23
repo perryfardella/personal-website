@@ -23,7 +23,7 @@ export default function ProjectsIndex() {
   return (
     <main className="flex min-h-screen flex-col items-center p-8">
       {projects.map((project) => (
-        <Card>
+        <Card key={project.title}>
           <CardHeader>
             <CardTitle>{project.title}</CardTitle>
             <CardDescription>{project.description}</CardDescription>
